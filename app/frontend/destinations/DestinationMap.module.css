@@ -1,0 +1,20 @@
+/* components/frontend/destinations/DestinationMap.module.css */
+
+/* Example: You can add custom styles as needed */
+
+.destination-map {
+    /* Example styles */
+  }
+  
+  @media (max-width: 768px) {
+    .destination-map {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .destination-map {
+      height: 250px;
+    }
+  }
+  

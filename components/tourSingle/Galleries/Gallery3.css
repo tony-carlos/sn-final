@@ -1,0 +1,105 @@
+/* Gallery3.css */
+
+/* Existing Thumbnail Styles */
+.thumbnail-container {
+  margin-bottom: 10px;
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Positioning for border effect */
+  border-radius: 12px; /* Rounded corners for the thumbnail */
+  cursor: pointer;
+}
+
+.thumbnail-container.active {
+  animation: none; /* No rotation of the container */
+}
+
+.img-thumbnail {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px; /* Make sure the image follows the same rounded shape */
+}
+
+/* Remove Box Shadow from Swiper */
+.swiper-wrapper,
+.js-section-slider {
+  box-shadow: none !important; /* Ensure no box-shadow is applied */
+}
+
+/* Animated Red Border Styles */
+.thumbnail-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid transparent; /* Start with transparent border */
+  box-sizing: border-box;
+}
+
+.thumbnail-container.active::before {
+  border-color: #681618; /* The red border that will animate */
+  animation: drawBorder 1s linear forwards; /* Forward animation to draw the border */
+}
+
+/* Keyframes for Drawing the Red Border */
+@keyframes drawBorder {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0); /* Start with no border visible */
+  }
+  25% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Draw top side */
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%); /* Draw right side */
+  }
+  75% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Draw bottom side */
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0); /* Complete the full border */
+  }
+}
+
+/* Media Queries */
+
+/* Hide Thumbnails on Mobile Devices */
+@media (max-width: 767px) {
+  .thumbnails-container {
+    display: none; /* Hide thumbnails on mobile */
+  }
+
+  /* Adjust Swiper Container Height on Mobile */
+  .js-section-slider {
+    height: 300px !important; /* Match map's height on mobile */
+  }
+
+  .swiper-wrapper {
+    height: 100% !important; /* Ensure Swiper takes full height of parent */
+  }
+
+  .swiper-slide {
+    height: 100% !important; /* Ensure slides take full height */
+  }
+
+  /* Adjust Image Styling in Swiper Slides */
+  .img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Ensure Thumbnails are Visible on Tablets and Larger */
+@media (min-width: 768px) {
+  .thumbnails-container {
+    display: block;
+  }
+}
