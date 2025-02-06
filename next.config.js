@@ -1,4 +1,5 @@
 // next.config.js
+
 /** @type {import('next').NextConfig} */
 const { setupDevPlatform } = require("@cloudflare/next-on-pages/next-dev");
 
