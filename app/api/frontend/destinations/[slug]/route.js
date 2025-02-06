@@ -1,4 +1,5 @@
 // app/api/frontend/destinations/[slug]/route.js
+export const runtime = "edge"; // <-- Add this at the top
 
 import { NextResponse } from "next/server";
 import { fetchDestinationBySlug } from "@/app/lib/services/destinations"; // Ensure correct path

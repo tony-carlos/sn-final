@@ -1,6 +1,7 @@
 // /app/admin/safariguide/[slug]/page.js
 
 "use client";
+export const runtime = "edge"; // <-- Add this at the top
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";

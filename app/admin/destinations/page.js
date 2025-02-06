@@ -1,4 +1,5 @@
 // app/admin/destinations/page.js
+export const runtime = "edge"; // <-- Add this at the top
 
 import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';

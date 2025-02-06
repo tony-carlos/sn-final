@@ -1,4 +1,5 @@
 // app/api/contact/route.js
+export const runtime = "edge"; // <-- Add this at the top
 
 import { db } from "@/app/lib/firebase";
 import { collection, addDoc, Timestamp } from "firebase/firestore";

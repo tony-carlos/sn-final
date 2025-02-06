@@ -1,4 +1,6 @@
 // app/api/quotes/[id]/route.js
+export const runtime = "edge"; // <-- Add this at the top
+
 import { db } from "@/app/lib/firebase";
 import { doc, getDoc } from "firebase/firestore";
 

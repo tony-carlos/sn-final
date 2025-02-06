@@ -1,4 +1,5 @@
 // /app/api/frontend/tour-packages/[slug]/route.js
+export const runtime = "edge"; // <-- Add this at the top
 
 import { NextResponse } from "next/server";
 import { fetchTourPackageBySlug } from "@/app/lib/services/tourPackages";

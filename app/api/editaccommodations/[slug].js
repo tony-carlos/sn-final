@@ -1,4 +1,5 @@
 // pages/api/editiaccommodations/[slug].js
+export const runtime = "edge"; // <-- Add this at the top
 
 import { db } from "@/app/lib/firebase"; // Adjust the path as necessary
 import {

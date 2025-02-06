@@ -1,4 +1,5 @@
 // /app/api/translate/deepl/route.js
+export const runtime = "edge"; // <-- Add this at the top
 
 import axios from 'axios';
 

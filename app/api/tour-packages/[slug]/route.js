@@ -1,4 +1,5 @@
 // /app/api/tour-packages/[slug]/route.js
+export const runtime = "edge"; // <-- Add this at the top
 
 import { NextResponse } from 'next/server';
 import { db } from '@/app/lib/firebase'; // Adjust the import path as necessary

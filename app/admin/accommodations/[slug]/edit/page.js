@@ -1,6 +1,7 @@
 // app/admin/accommodations/[slug]/edit/page.js
 
 "use client";
+export const runtime = "edge"; // <-- Add this at the top
 
 import React from "react";
 import EditAccommodationForm from "@/app/components/EditAccommodationForm";

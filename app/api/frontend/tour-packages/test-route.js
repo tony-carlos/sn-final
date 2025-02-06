@@ -1,4 +1,5 @@
 // app/api/frontend/tour-packages/test-route.js
+export const runtime = "edge"; // <-- Add this at the top
 
 import { db } from '@/app/lib/firebaseClient';
 import { collection, getDocs, query, orderBy } from 'firebase/firestore';

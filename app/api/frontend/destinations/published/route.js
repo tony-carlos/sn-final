@@ -1,4 +1,5 @@
 // app/api/frontend/destinations/published/route.js
+export const runtime = "edge"; // <-- Add this at the top
 
 import { NextResponse } from "next/server";
 import { collection, getDocs, query, where } from "firebase/firestore";

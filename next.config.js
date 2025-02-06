@@ -1,14 +1,14 @@
 // next.config.js
-import { setupDevPlatform } from "@cloudflare/next-on-pages/next-dev";
-
 /** @type {import('next').NextConfig} */
+const { setupDevPlatform } = require("@cloudflare/next-on-pages/next-dev");
+
 const nextConfig = {
   images: {
     domains: ["firebasestorage.googleapis.com"],
     minimumCacheTTL: 0,
   },
   experimental: {
-    largePageDataBytes: 128 * 100000, // Increase the limit for large data
+    largePageDataBytes: 128 * 100000,
   },
   async headers() {
     return [
@@ -25,9 +25,10 @@ const nextConfig = {
   },
 };
 
-// Only run setupDevPlatform in development
-if (process.env.NODE_ENV === "development") {
-  await setupDevPlatform();
-}
-
-export default nextConfig;
+module.exports = async () => {
+  // Only run setupDevPlatform in development
+  if (process.env.NODE_ENV === "development") {
+    await setupDevPlatform();
+  }
+  return nextConfig;
+};

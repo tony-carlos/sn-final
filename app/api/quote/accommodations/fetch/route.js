@@ -1,4 +1,5 @@
 // /app/api/quote/accommodations/fetch/route.js
+export const runtime = "edge"; // <-- Add this at the top
 
 import { NextResponse } from "next/server";
 import { collection, query, where, getDocs } from "firebase/firestore";

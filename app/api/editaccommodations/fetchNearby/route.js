@@ -1,3 +1,5 @@
+export const runtime = "edge"; // <-- Add this at the top
+
 export const dynamic = "force-dynamic"; // Must be the first line
 
 import { NextResponse } from "next/server";

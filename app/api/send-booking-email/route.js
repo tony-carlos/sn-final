@@ -1,4 +1,6 @@
 // app/api/send-booking-email/route.js
+export const runtime = "edge"; // <-- Add this at the top
+
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 

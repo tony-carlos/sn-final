@@ -1,4 +1,5 @@
 "use client";
+export const runtime = "edge"; // <-- Add this at the top
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { LoadScript, Autocomplete } from "@react-google-maps/api";

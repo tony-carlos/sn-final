@@ -1,4 +1,5 @@
 // /app/api/translate/google/route.js
+export const runtime = "edge"; // <-- Add this at the top
 
 import { NextResponse } from 'next/server';
 import axios from 'axios';

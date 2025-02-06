@@ -1,4 +1,5 @@
 // app/api/accommodations/fetchPlaceDetails/route.js
+export const runtime = "edge"; // <-- Add this at the top
 
 export const dynamic = "force-dynamic"; // Must be the first line
 

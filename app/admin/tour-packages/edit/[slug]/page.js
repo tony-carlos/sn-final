@@ -1,6 +1,7 @@
 // /app/admin/tour-packages/edit/[slug]/page.js
 
 'use client'; // Ensure this is a client component
+export const runtime = "edge"; // <-- Add this at the top
 
 import React, { useEffect, useState } from "react";
 import TourPackageForm from "../../create/components/TourPackageForm";

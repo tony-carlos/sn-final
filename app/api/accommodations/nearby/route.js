@@ -1,4 +1,6 @@
 // app/api/accommodations/nearby/route.js
+export const runtime = "edge"; // <-- Add this at the top
+
 export const dynamic = 'force-dynamic';
 import { NextResponse } from "next/server";
 

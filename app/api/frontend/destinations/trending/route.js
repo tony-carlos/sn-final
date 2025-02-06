@@ -1,4 +1,5 @@
 // app/api/frontend/destinations/trending/route.js
+export const runtime = "edge"; // <-- Add this at the top
 
 import { NextResponse } from "next/server";
 import { fetchTrendingDestinations } from "@/app/lib/services/destinations";

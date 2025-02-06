@@ -1,4 +1,5 @@
 // app/api/accommodations/edit/route.js
+export const runtime = "edge"; // <-- Add this at the top
 
 import { NextResponse } from "next/server";
 import { db, storage } from "@/app/lib/firebase";
