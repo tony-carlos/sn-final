@@ -1,5 +1,5 @@
 // app/api/send-email/route.js
-export const runtime = "edge"; // <-- Add this at the top
+export const runtime = 'edge'; // yes, it's an edge environment
 
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
