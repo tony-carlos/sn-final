@@ -20,13 +20,7 @@ export async function POST(request) {
     } = data;
 
     // Create transporter
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-      }
-    });
+
 
     // Format dates
     const formatDate = (timestamp) => {
